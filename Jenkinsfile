@@ -2,8 +2,7 @@ pipeline {
  agent any
  stages {
   stage('checkout'){
-   steps{
-    sh 'git checkout -b cicd-pipeline-gradle'
+   checkout scm
    }
   stage('Build') {
     steps {
